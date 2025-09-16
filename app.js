@@ -94,8 +94,8 @@ function buildLegend(){
 function updateLegendTitle(){
   const legendTitleText = document.getElementById('legend-title-text');
   legendTitleText.textContent = (currentFuel === 'g95')
-    ? 'Precio de la Gasolina'
-    : 'Precio del Diésel';
+    ? 'Precio de la gasolina'
+    : 'Precio del diésel';
 }
 
 // SLIDER
