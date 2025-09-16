@@ -15,7 +15,7 @@ const DIESEL_COLORS = ['#fff4c2','#ffe79a','#ffd76a','#ffca3a','#f3b61f','#d79a0
 /* Tileset */
 const TILESET_USER = 'newtral';
 const TILESET_ID   = '7sapo8ln';
-const SOURCE_LAYER = 'estaciones';
+const SOURCE_LAYER = 'precios_gasolineras';
 
 /* Campos */
 const FLD = {
@@ -83,7 +83,7 @@ function updateLegendTitle(){
 }
 const mid = f => DOMAIN_MIN + (DOMAIN_MAX - DOMAIN_MIN) * f;
 
-/* Slider (solo para desktop; en móvil lo ocultas por CSS) */
+/* Slider (solo para escritorio) */
 noUiSlider.create(rangeEl, {
   start: [FALLBACK_MIN, FALLBACK_MAX],
   connect: true,
@@ -105,7 +105,7 @@ tabs.forEach(btn => {
     currentFuel = btn.dataset.fuel;
     updateLegendTitle();
 
-    await ensureGlobalStats(currentFuel);  // cortes globales por dataset
+    await ensureGlobalStats(currentFuel);
     syncSliderLegendAndStyle();
   });
 });
@@ -157,7 +157,7 @@ map.on('load', async () => {
     }
   });
 
-  await ensureGlobalStats(currentFuel);   // cortes globales (no-viewport)
+  await ensureGlobalStats(currentFuel);
   updateLegendTitle();
   syncSliderLegendAndStyle();
 
