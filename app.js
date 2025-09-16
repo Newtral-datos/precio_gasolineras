@@ -15,7 +15,7 @@ const DIESEL_COLORS = ['#fff4c2','#ffe79a','#ffd76a','#ffca3a','#f3b61f','#d79a0
 /* Tileset */
 const TILESET_USER = 'newtral';
 const TILESET_ID   = '7sapo8ln';
-const SOURCE_LAYER = 'precios_gasolineras';
+const SOURCE_LAYER = 'estaciones';
 
 /* Campos */
 const FLD = {
